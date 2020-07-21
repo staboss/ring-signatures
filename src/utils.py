@@ -2,11 +2,11 @@ import random
 
 from Crypto.Hash import keccak
 
-from ed25519 import *
+from src.ed25519 import *
 
 
 def from_bytes(b):
-    return int.from_bytes(b, "big")
+    return int.from_bytes(b, sys.byteorder)
 
 
 def field_value_gen(order=l):
@@ -18,6 +18,14 @@ def matrix_gen(n, m):
     for i in range(n):
         matrix[i] = [None] * m
     return matrix
+
+
+def secret_key():
+    return field_value_gen()
+
+
+def public_key(secret_key):
+    return point_mul(secret_key, G)
 
 
 def keccak256(s):

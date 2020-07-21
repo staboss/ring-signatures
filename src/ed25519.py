@@ -1,3 +1,6 @@
+import sys
+
+
 def inv_mod_q(x):
     return pow(x, q - 2, q)
 
@@ -73,14 +76,14 @@ def point_compress(P):
     z = inv_mod_q(P[2])
     x = P[0] * z % q
     y = P[1] * z % q
-    return int.to_bytes(y | ((x & 1) << 255), 32, "big")
+    return int.to_bytes(y | ((x & 1) << 255), 32, sys.byteorder)
 
 
 def point_decompress(s):
     if len(s) != 32:
         raise Exception("Invalid input length for decompression")
 
-    y = int.from_bytes(s, "big")
+    y = int.from_bytes(s, sys.byteorder)
     sign = y >> 255
     y &= (1 << 255) - 1
 
