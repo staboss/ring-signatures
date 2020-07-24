@@ -10,7 +10,7 @@ def from_bytes(b):
 
 
 def field_value_gen(order=l):
-    return random.randint(1, order - 1)
+    return random.randint(0, order - 1)
 
 
 def matrix_gen(n, m):
@@ -24,8 +24,8 @@ def secret_key():
     return field_value_gen()
 
 
-def public_key(secret_key):
-    return point_mul(secret_key, G)
+def public_key(sk):
+    return point_mul(sk, G)
 
 
 def keccak256(s):
