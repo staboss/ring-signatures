@@ -28,7 +28,7 @@ class MLSAG:
     @staticmethod
     def key_generation(n, m):
         """
-        The  key  generation  algorithm
+        The key generation algorithm
 
         :param n: Number of users
         :param m: Number of one-time addresses
@@ -50,7 +50,7 @@ class MLSAG:
 
     def sign(self, sk_vector, index):
         """
-        The  ring  signature  algorithm
+        The ring signature algorithm
 
         :param index: Signer secret index
         :param sk_vector: Secret key-vector
@@ -97,7 +97,7 @@ class MLSAG:
 
     def verify(self, IK_vector, c_value, s_vectors):
         """
-        The  ring  verification  algorithm
+        The ring verification algorithm
 
         :param IK_vector: Image key-vector
         :param c_value: Auxiliary value

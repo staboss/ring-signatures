@@ -9,7 +9,7 @@ def image_key(sk, PK):
 
 def key_generation(n, m):
     """
-    The  key  generation  algorithm
+    The key generation algorithm
 
     :param n: Number of users
     :param m: Number of one-time addresses
@@ -31,7 +31,7 @@ def key_generation(n, m):
 
 def mlsag_generation(message, PK_vectors, sk_vector, index):
     """
-    The  ring  signature  algorithm
+    The ring signature algorithm
 
     :param index: Signer secret index
     :param message: Secret message (bytes)
@@ -84,7 +84,7 @@ def mlsag_generation(message, PK_vectors, sk_vector, index):
 
 def mlsag_verification(message, PK_vectors, IK_vector, c_value, s_vectors):
     """
-    The  ring  verification  algorithm
+    The ring verification algorithm
 
     :param message: Secret message (bytes)
     :param PK_vectors: Public key-vectors

@@ -47,6 +47,13 @@ def scalar_hash(s):
     return keccak256_mod_l(s)
 
 
+def combine_value(m, L, R):
+    res = m
+    res += point_compress(L)
+    res += point_compress(R)
+    return res
+
+
 def combine_values(m, L, R):
     assert len(L) == len(R)
 
