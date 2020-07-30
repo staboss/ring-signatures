@@ -1,5 +1,6 @@
-# MLSAG Signature
-Multilayer linkable spontaneous anonymous group signature python illustration.
+# Ring signatures
+- Linkable spontaneous anonymous group signatures (LSAG);
+- Multilayer linkable spontaneous anonymous group signature signatures (MLSAG).
 
 ### Cryptographic primitives
 - Edwards25519 elliptic curve;

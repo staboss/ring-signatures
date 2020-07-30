@@ -67,4 +67,5 @@ def mlsag_client():
 
 
 if __name__ == '__main__':
+    mlsag_client()
     lsag_client()
