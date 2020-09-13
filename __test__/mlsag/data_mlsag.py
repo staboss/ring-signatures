@@ -5,7 +5,7 @@ from src.mlsag.mlsag_oop import MLSAG
 message = "MLSAG signature"
 m = 5
 
-f = open("data_mlsag.csv", "a")
+f = open("data/data_mlsag_core_i5.csv", "a")
 
 for n in range(4, 101):
     s_time = time.time()

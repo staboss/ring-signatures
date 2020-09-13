@@ -4,7 +4,7 @@ from src.lsag.lsag_oop import LSAG
 
 message = "LSAG signature"
 
-f = open("data_lsag.csv", "a")
+f = open("data/data_lsag_core_i5.csv", "a")
 
 for n in range(4, 101):
     s_time = time.time()

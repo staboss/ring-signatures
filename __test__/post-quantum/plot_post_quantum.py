@@ -11,7 +11,7 @@ def create_data(sign=True):
     x.clear()
     y.clear()
 
-    with open("data/data_mlsag_core_i7.csv", newline='') as csv_file:
+    with open("data/data_post_quantum_core_i7.csv.csv", newline='') as csv_file:
         spam_reader = csv.reader(csv_file, delimiter=',')
 
         for row in spam_reader:
@@ -51,7 +51,7 @@ def create_plot():
     axs.plot(x, y)
 
     plot.xticks(np.arange(0, 105, 20))
-    plot.yticks(np.arange(0, round(max(y)), 2))
+    plot.yticks(np.arange(0, round(max(y)), 10))
 
     plot.ylabel("Time (seconds)", labelpad=30)
     plot.xlabel("Number of users", labelpad=30)
@@ -64,9 +64,9 @@ def main(sign=True):
     create_plot()
 
     if sign:
-        plot.savefig("plot/plot_sign_mlsag.png")
+        plot.savefig("plot/plot_sign_post_quantum.png")
     else:
-        plot.savefig("plot/plot_verify_mlsag.png")
+        plot.savefig("plot/plot_verify_post_quantum.png")
 
 
 if __name__ == '__main__':
