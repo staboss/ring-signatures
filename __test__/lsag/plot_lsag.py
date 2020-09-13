@@ -11,7 +11,7 @@ def create_data(sign=True):
     x.clear()
     y.clear()
 
-    with open("data/data_lsag_core_i5.csv", newline='') as csv_file:
+    with open("data/data_lsag_core_i7.csv", newline='') as csv_file:
         spam_reader = csv.reader(csv_file, delimiter=',')
 
         for row in spam_reader:
@@ -37,7 +37,7 @@ def create_plot():
     fig, axs = plot.subplots(figsize=(20, 15))
 
     axs.set_xlim(0, 100)
-    axs.set_ylim(0, round(max(y)))
+    axs.set_ylim(0, 1.4)
 
     axs.xaxis.set_major_locator(MultipleLocator(20))
     axs.yaxis.set_major_locator(MultipleLocator(20))
@@ -51,7 +51,7 @@ def create_plot():
     axs.plot(x, y)
 
     plot.xticks(np.arange(0, 105, 20))
-    plot.yticks(np.arange(0, round(max(y)), 2))
+    plot.yticks(np.arange(0, 1.4, 0.4))
 
     plot.ylabel("Time (seconds)", labelpad=30)
     plot.xlabel("Number of users", labelpad=30)
